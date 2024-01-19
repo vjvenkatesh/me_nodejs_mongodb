@@ -12,7 +12,7 @@ app.use(express.json());
 
 // NOTE - Uncomment in Milestone 5
 // Middleware to log API request metadata
-// app.use(captureDateMiddleware);
+app.use(captureDateMiddleware);
 
 app.use("/v1", routes);
 

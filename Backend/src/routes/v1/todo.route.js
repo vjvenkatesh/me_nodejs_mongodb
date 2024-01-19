@@ -11,11 +11,7 @@ const Todos = require("../../models/todo.model");
  *
  */
 router.get("/", async (req, res) => {
-  console.log(
-    `URL:  /v1/todos${req.url == "/" ? "" : req.url}, Method:  ${
-      req.method
-    }, Timestamp: ${new Date()}`
-  );
+ 
 
   Todos.find({}, (err, allTodos) => {
     if (err) {
@@ -39,7 +35,7 @@ router.get("/", async (req, res) => {
     -H 'Content-Type: application/json'
 */
 router.post("/", async (req, res) => {
-  console.log(req.body);
+  
 
   // let newTodo = {
   //   name: req.body.name,
